@@ -1,0 +1,11 @@
+<?php if ($this->products): ?>
+    <ul>
+        <?php foreach ($this->products as $product): ?>
+            <li>
+                <a href="<?php echo $this->url('home', ['action' => 'edit', 'id' => $product->getId()]) ?>">
+                    <?= $product->getName() ?> - Apertou editou
+                </a>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
